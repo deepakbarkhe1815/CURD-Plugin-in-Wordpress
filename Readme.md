@@ -1,1 +1,4 @@
-# This is Curd Employee Management System in Wordress Plugin
+
+# This is a Curd based employee management system WordPress plugin.
+# HTML, CSS, and JavaScript front end are used in this.
+# The database in it is mysql.
