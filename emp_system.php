@@ -13,6 +13,7 @@
 
 */
 
+define("Emp_PLUGIN_PATH", plugin_dir_path(__FILE__));
 
 // Calling action hook to add menu
 add_action("admin_menu","cp_add_admin_menu");
@@ -33,13 +34,13 @@ function cp_add_admin_menu(){
 
 // Menu Handle
 function cp_emp_system(){
-    echo "<h2>Welcome Employee Management System</h2>";
+    include_once(Emp_PLUGIN_PATH."pages/add_employee.php");
 }
 
 
 // Submit Callback Function
 function emp_list_employee(){
-    echo "<h2>Welcome Employee List Page</h2>";
+    include_once(Emp_PLUGIN_PATH."pages/list_employee.php");
 }
 
 ?>
