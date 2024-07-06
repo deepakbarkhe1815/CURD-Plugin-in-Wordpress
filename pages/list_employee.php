@@ -25,18 +25,13 @@
         }
 
         tbody tr:hover{
-            background-color:#062;
+            background-color:#df4af9;
             box-shadow:1px 1px 2px rgba(0, 0, 0, 0.3);
             cursor:pointer;
         }
 
 
-        /* @media (max-width:465px){
-            table{
-            border-collapse:collapse;
-            width:470px;
-            } 
-        } */
+        
     </style>
 </head>
 <body>
@@ -50,12 +45,20 @@
                     <th>Phone No</th>
                     <th>Gender</th>
                     <th>Designation</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>Deepak Barkhe</td>
                     <td>deepakbarkhe@gmail.com</td>
+                    <td>8962195447</td>
+                    <td>Male</td>
+                    <td>SE</td>
+                    <td>
+                        <a href="#" class="btn-action">Edit</a>
+                        <a href="#" class="btn-action">Delete</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>Deepak Barkhe</td>
