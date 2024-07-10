@@ -15,6 +15,10 @@
 
 define("Emp_PLUGIN_PATH", plugin_dir_path(__FILE__));
 
+
+define("Emp_PLUGIN_URL",plugin_dir_url(__FILE__));
+
+
 // Calling action hook to add menu
 add_action("admin_menu","cp_add_admin_menu");
 
@@ -38,9 +42,45 @@ function cp_emp_system(){
 }
 
 
-// Submit Callback Function
+// Submenu Callback Function
 function emp_list_employee(){
     include_once(Emp_PLUGIN_PATH."pages/list_employee.php");
 }
+
+register_activation_hook(__FILE__, "emp_create_table");
+
+function emp_create_table(){
+
+    global $wpdb;
+    $table_prefix = $wpdb->prefix; //wp_
+
+    $sql = "CREATE TABLE {$table_prefix}emp_custom_form_data (
+        `id` int(11) NOT NULL AUTO_INCREMENT,
+        `name` varchar(255) NOT NULL,
+        `email` varchar(255) NOT NULL,
+        `phone` varchar(255) NOT NULL,
+        `gender` enum('male','female','other') NOT NULL,
+        `desgination` varchar(255) NOT NULL,
+        PRIMARY KEY (`id`)
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+      ";
+      
+      include_once ABSPATH. "wp-admin/includes/upgrade.php";
+
+      dbDelta($sql);
+}
+
+register_deactivation_hook(__FILE__, "emp_deactivation_table");
+
+function emp_deactivation_table(){
+
+    global $wpdb;
+    $table_prefix = $wpdb->prefix;
+
+    $sql = "DROP TABLE IF EXISTS{$table_prefix}emp_custom_form_data";
+
+    $wpdb->query($sql);
+}
+
 
 ?>

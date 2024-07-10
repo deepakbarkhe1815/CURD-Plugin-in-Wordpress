@@ -1,0 +1,93 @@
+*{
+    font-family: sans-serif;
+}
+
+.form-outer{
+    width:600px;
+    height:500px;
+    background-color:#c9cfc2;
+    margin:10px;
+    border:1px solid black;
+    border-radius:5px;
+}
+
+.form-heading{
+    height:50px;
+}
+
+.form-heading h3{
+    background-color:#000;
+    color:#fff;
+    text-align:center;
+    height:30px;
+    padding:10px;
+    margin-top:0;
+}
+.wapper{
+    width:570px;
+    height:50px;
+    position: relative;
+    margin:20px;
+}
+
+.wapper input{
+    width:400px;
+    height:40px;
+    position: relative;
+    padding:10px;
+    font-size:16px;
+    font-weight: 500;
+}
+
+.wapper label{
+    position: absolute;
+    left:10px;
+    top:10px;
+    transition: all .3s ease;
+    background-color: #fff;
+    font-size:16px;
+    pointer-events:none;
+    padding: 0 5px;
+}
+
+.wapper input:focus ~ label,
+.wapper input:valid ~ label{
+    transform:translateY(-18px);
+}
+
+
+.select{
+    width:560px;
+    height:40px;
+    font-size:18px;
+    transition: 0.3s ease-in-out;
+}
+
+
+.btn{
+    margin:20px;
+    width:150px;
+    height:40px;
+}
+
+.btn button{
+    background-color:green;
+    width:150px;
+    height: 40px;
+    border:none;
+    border-radius:10px;
+    transition:all 0.2s ease-in-out;
+    cursor:pointer;
+    padding:10px 3px;
+    font-weight:600;
+}
+
+.btn button:hover{
+    background-color:rgb(1, 59, 11); 
+    color:#fff;
+}
+
+/* @media (max-width:465px){
+    .form-outer{
+        width:450px;
+    }
