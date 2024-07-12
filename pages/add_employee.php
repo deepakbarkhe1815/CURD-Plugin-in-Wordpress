@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Employee</title>
-    <link rel="stylesheet" href="<?php echo Emp_PLUGIN_URL?>css/add_employee.css">
-    
-</head>
-<body>
-    <h2>Welcome Employee Management System</h2>
+
+    <h4>Welcome Employee Management System</h4>
     <div class="form-outer">
         <form action="" method="post">
             <div class="form-heading">
@@ -43,5 +34,4 @@
             </div>
         </form>
     </div>
-</body>
-</html>
+

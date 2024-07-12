@@ -82,5 +82,17 @@ function emp_deactivation_table(){
     $wpdb->query($sql);
 }
 
+// Add CSS and Javascript to Plugin
+add_action("admin_enqueue_scripts","emp_add_plugin_assets");
 
+
+function emp_add_plugin_assets(){
+    // Style CSS
+    wp_enqueue_style("emp-addemp-css", Emp_PLUGIN_URL."css/add_employee.css", array(), "1.0.0", "all");
+    wp_enqueue_style("emp-listemp-css", Emp_PLUGIN_URL."css/list_employee.css", array(), "1.0.0", "all");
+    
+    // Javascript
+    wp_enqueue_script("emp-listemp-js", Emp_PLUGIN_URL."js/function.js", array(), "1.0.0", "all");
+
+}
 ?>

@@ -1,25 +1,9 @@
-<?php 
-$limit = $_POST['limit'];
 
-echo $limit;
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List Employee</title>
-    <link rel="stylesheet" href="<?php echo Emp_PLUGIN_URL ?>css/list_employee.css">
-    
-</head>
-<body>
     <div class="main-container">
-        <h2>Employee List Page</h2>
+        <h2 class="emp-list-h2">Employee List Page</h2>
         <div class="container">
             <div class="limit-option">
-                <select name="limit" id="limit" onchange='handle()'>
+                <select name="limit" id="limit" >
                     <option value="5">5</option>
                     <option value="10">10</option>
                     <option value="15">15</option>
@@ -107,20 +91,12 @@ echo $limit;
 
         <div class="bottom-content">
             <div class="text-show">
-                <span>Showing 1 to <script>
-                    var table = document.getElementById("tabel-emp");
-
-                    var totalRowCount = table.rows.length; 
-
-                    var tbodyRowCount = table.tBodies[0].rows.length;
-                    document.write(tbodyRowCount);
-         </script> of 
-         <script>document.write(tbodyRowCount)</script> 
-         entries</span>
+                <span>Showing 1 to 
+                    <span id="colone"></span> of  <span id="coltwo"></span> entries</span>
          
             </div>
             <div class="next-btn">
-                <button type="submit">< Pre</button>
+                <button type="submit">< Pre </button>
                 <button type="submit">Next > </button>
             </div>
         </div>
@@ -128,20 +104,4 @@ echo $limit;
     
 
    
-    <script>
-       
-            var table = document.getElementById("tabel-emp");
-     
-            // var totalRowCount = table.rows.length; 
-     
-            var tbodyRowCount = table.tBodies[0].rows.length;
-
-      funtion limit(1){
-        let limit = 
-      }
-
-       
-       console.log(tbodyRowCount);
-    </script>
-</body>
-</html>
+   

@@ -1,11 +1,18 @@
+
 *{
     font-family: sans-serif;
 }
 
+h4{
+    font-size:25px;
+    font-weight: 300;
+    margin-left: 20px;
+ }
+
 .form-outer{
     width:600px;
     height:500px;
-    background-color:#c9cfc2;
+    background-color:#c9cfc227;
     margin:10px;
     border:1px solid black;
     border-radius:5px;
